@@ -2,6 +2,11 @@ $colorSelectSite:red;
 $widthSite: 1140px;
 $backBlock: black;
 $colorText: #424242;
+$gapGrid:30px ;
+$thirdSite:($widthSite - $gapGrid) / 3 ;
+@import 'mixins' ;
+
+
 
 
 a {
@@ -96,6 +101,17 @@ body {
 
 }
 
+.product-box {
+    @include centerflex();
+    gap: $gapGrid;
+}
 
+.filter{
+    padding: 13px 16px 16px;
+   &__summary{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
 
-
+}
